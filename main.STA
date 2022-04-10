@@ -1,0 +1,473 @@
+
+ROM used:   62686/65536 (96%)
+            65312/65536 (100%) including unused fragments
+
+            5.6 Average locations per line
+            11.9 Average locations per statement
+
+RAM used:   616/3968 (16%) at main() level
+            948/3968 (24%) worst case
+
+Stack used: 9 worst case (7 in main + 2 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   79    12   0  main.c
+   21     0   0  main.h
+  844     0   0  ..\..\..\..\Program Files\PICC\Devices\18F4620.h
+  168     0   0  ..\..\..\..\Program Files\PICC\Drivers\stdint.h
+  236     0   0  ..\..\..\..\Program Files\PICC\Drivers\time.h
+  419   159   3  ..\..\..\..\Program Files\PICC\Drivers\stdlibm.h
+   32    94   2  ..\..\..\..\Program Files\PICC\Drivers\stddef.h
+   76    13   0  ..\..\..\..\Program Files\PICC\Drivers\memmgmt.c
+  430   186   4  ..\..\..\..\Program Files\PICC\Drivers\time.c
+ 1352   453   9  ..\..\..\..\Program Files\PICC\Drivers\stdlib.h
+  435   223   4  ..\..\..\..\Program Files\PICC\Drivers\string.h
+   28    94   2  ..\..\..\..\Program Files\PICC\Drivers\ctype.h
+  329    25   0  ..\..\..\..\Program Files\PICC\Drivers\internal_eeprom.c
+  149    51   1  ds1338.c
+  309    65   1  flex_lcd.c
+  262     0   0  declarations.c
+   16     0   0  sw_defines.c
+  258    22   0  ioconfig.c
+  561   387   7  myfunctions.c
+  537   394   7  uifunctions.c
+  368   210   4  eventlog_pic.c
+  504   388   7  dgfunctions.c
+  481   286   5  check_conditions.c
+  967   736  14  swinit.c
+  290   149   3  events.c
+  134    91   2  mainsfunctions.c
+ 1165   774  15  settings.c
+  632   454   9  processio.c
+  152     0   0  rom.c
+----- -----
+11234  5266 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     32   0    0             @FLASHWR
+0     42   0    1             @delay_ms1
+0     34   0    1             @delay_us1
+0     28   0    1             @I2C_WRITEU_1
+0     30   0    1             @I2C_READU_1
+0     34   0    5             @MUL1616
+0    100   0    2    352  4.6  DaysInMonth
+0    140   0    4    211  4.9  LeapYear
+0     70   0    5             @DIV1616
+0   1178   1   23   1393 11.9  mktime
+0     92   0   14             @MUL3232
+0     44   0    3             @DIV88
+0    234   0   14             @DIVS3232
+0     32   0    1             @SPRINTF
+0    134   0    2             @PRINTF_U_831
+0    200   0    9             @PRINTF_LU_831
+0    246   0   11             @MULFF
+0     54   0    2             @ITOF
+0    632   1   16             @ADDFF
+0    350   0   14             @DIVFF
+0    112   0    9    204  5.8  write_int16_eeprom
+0     96   0   10    221  5.5  read_int16_eeprom
+0     62   0    2    243  2.9  read_ds1338
+0     90   0    1    341  2.8  rtc_init
+0     48   0    4    171  5.3  get_bcd
+0     50   0    3    166  4.3  rm_bcd
+0    138   0    7    517  2.1  rtc_set_datetime
+ Inline         5    238  3.1  rtc_get_date
+ Inline         4    170  3.0  rtc_get_time
+0     20   0    0             @const1180
+0     74   0    1    326  2.8  lcd_send_nibble
+0     68   0    3    235  3.8  lcd_send_byte
+0    118   0    2    380  4.7  lcd_init
+0     38   0    4    186  5.5  lcd_gotoxy
+0     92   0    1    272  4.1  lcd_putc
+0    130   0    5    469  7.5  LCD_WriteLineStr
+0     60   0    3     80  2.7  LCD_WriteString
+0     14   0    2     47  1.8  LCD_GotoXY
+0     10   0    1     44  0.1  LCD_Write
+0     14   0    1     96  0.6  MContact_GetVal
+0     94   0    2    373  4.0  select
+0    132   0    7    258  4.4  ReadAveADC_10ms
+0    148   0   13             @DIV3232
+0     94   0    2    219  3.0  keyBoardRead
+0     94   0    2    219  3.0  keyBoardRead_inside_int
+0   3044   2   15  14479 11.9  amfDisplay
+0     14   0    0             @const1511
+0     32   0    2             @PSTRINGC_831
+0     18   0    0             @const1515
+0     42   0    3             @PSTRINGCN_831
+0     66   0    5             @FTOSD
+0    502   0   13             @PRINTF_L32D_831FPFPFR
+0     16   0    0             @const1525
+0     16   0    0             @const1528
+0     16   0    0             @const1529
+0     60   0    4             @SFTOI
+0     18   0    0             @const1532
+0     20   0    0             @const1533
+0    196   0   12             @PRINTF_L32U_831
+0     20   0    0             @const1536
+0   2408   2   25   8147  8.9  displayContentUpdate
+0     16   0    0             @const1537
+0     16   0    0             @const1538
+0     18   0    0             @const1539
+0     16   0    0             @const1540
+0     16   0    0             @const1541
+0     10   0    0             @const1542
+0      6   0    0             @const1543
+0     16   0    0             @const1544
+0     18   0    0             @const1545
+0     16   0    0             @const1546
+0     18   0    0             @const1547
+0     16   0    0             @const1548
+0     10   0    0             @const1549
+0     16   0    0             @const1550
+0     16   0    0             @const1551
+0     16   0    0             @const1552
+0     14   0    0             @const1553
+0     16   0    0             @const1554
+0     16   0    0             @const1555
+0     10   0    0             @const1556
+0     14   0    0             @const1557
+0     10   0    0             @const1558
+0     14   0    0             @const1559
+0     16   0    0             @const1560
+0     14   0    0             @const1561
+0     14   0    0             @const1562
+0     12   0    0             @const1563
+0     16   0    0             @const1564
+0     12   0    0             @const1565
+0     16   0    0             @const1566
+0     10   0    0             @const1567
+0     10   0    0             @const1568
+0     18   0    0             @const1569
+0     14   0    0             @const1570
+0     18   0    0             @const1571
+0     26   0    0             @const1572
+0     14   0    0             @const1573
+0     16   0    0             @const1574
+0    200   0    6             @PRINTF_D_831
+0     14   0    0             @const1578
+0     16   0    0             @const1579
+0     14   0    0             @const1580
+0     16   0    0             @const1581
+0     16   0    0             @const1582
+0     24   0    0             @const1583
+0    200   0    6             @PRINTF_D0_831
+0     18   0    0             @const1587
+0     14   0    0             @const1588
+0     14   0    0             @const1589
+0     12   0    0             @const1590
+0     14   0    0             @const1591
+0     16   0    0             @const1592
+0    122   0   10             @FLT
+0     16   0    0             @const1596
+0     18   0    0             @const1597
+0     14   0    0             @const1598
+0     12   0    0             @const1599
+0     14   0    0             @const1600
+0     16   0    0             @const1601
+0     16   0    0             @const1602
+0      8   0    0             @const1603
+0     16   0    0             @const1604
+0      8   0    0             @const1605
+0     16   0    0             @const1606
+0     14   0    0             @const1607
+0     10   0    0             @const1608
+0      8   0    0             @const1609
+0    294   0   13    517  4.3  amfGetRTCTimeExternal
+0    146   0    9    208  3.7  amfSetRTCTimeExternal
+0     38   0    0    134  3.4  amfExtRTCInit
+0     98   0    5    209  4.0  amfDelayLongMs
+0    156   0   15    175  4.9  amfFlashRead16
+0    268   0   17    329  5.1  amfFlashRead32
+0    216   0   18    419  6.1  amfFlash_Set32
+0     22   0    0             @FLASHLOAD
+0     40   0    6     57  2.6  Eprom_Read16
+0     36   0    4    119  3.0  Eprom_Set16
+0     10   0    0     21  0.9  disableAmfInterrupts
+0      6   0    0     21  0.9  enableAmfInterrupts
+0     66   0    3    120  2.8  amfEEpromWrite8
+0    104   0    3    238  5.8  TimedKBInput
+0     44   0    2    102  1.6  ValuePrint16
+0    200   0    9             @PRINTF_LU_1193
+0     26   0    0     57  1.4  PrintSaved
+0      6   0    0             @const1657
+0     34   0    2             @PSTRINGC_1193
+0    102   0    5    218  1.7  PrintHrMinValues
+0    732   1   14   2357 10.3  ReadTimeInput
+0    104   0    1    272  3.0  PrintYesOrNo
+0      4   0    0             @const1674
+0      4   0    0             @const1675
+0    176   0    4    750  6.2  YesOrNo
+0    104   0    2    272  3.0  PrintEnDis
+0     10   0    0             @const1682
+0     10   0    0             @const1683
+0    310   0   15    996  6.8  EnabledDisabled_Flash
+0    220   0   15    279  5.8  convertNumberToArray5
+0    484   0   22    269  3.6  convertArrayToNumber5
+0    734   1   24   2365 10.7  GetValue32
+0    332   0    8   1127  8.1  GetValue16
+0    430   0   17   1393  8.7  SetValue16
+0    686   1   24   2469 10.4  GetPassWord32
+0    450   0    0             @const1729
+0     78   0    5    160  4.0  init_log_status
+0    676   1    7   1657  6.4  log_fault
+0    424   0   11   1035  6.8  event_record
+0    698   1   32   1390  7.3  disp_log_details
+0     18   0    0             @const1760
+0     24   0    0             @const1762
+0    134   0    2             @PRINTF_U_1193
+0     44   0    3             @PSTRINGCN_1193
+0    258   0    4   2389  8.3  processLog
+0     78   0    4     63  2.3  get_error_code
+0   2250   2   33   4745  9.9  logView
+0    162   0    4    405  5.0  clearEventLog
+0      8   0    0     47  1.3  crankTimerClear
+0    344   0    4   1663  6.8  scheduler
+0    228   0    1   1787  5.4  processAutoCrank
+0    430   0    1   3752  6.4  processAutoStop
+0    104   0    1    753  4.3  processFaultDelay
+0     88   0    1    567  4.3  processWarningtDelay
+0    104   0    1    676  5.8  processLowFuelDelay
+0    100   0    1    800  5.3  processTrip
+0    298   0    1   2768  6.9  processBuildup
+0     74   0    1    482  5.1  processLLOPDelay
+0    138   0    2    987  5.8  processRecool
+0     80   0    0    450  4.7  processHooterAuto
+0    546   0   14   2598  8.3  updateReadings
+0   1552   1    4   8365  9.0  dgVoltCheck
+0   1452   1   20   4426 10.5  mainsCheck
+0    408   0    2   2111  5.9  faultCheck
+0    842   1    8   2687  7.9  dcCheck
+0    114   0    0    782  2.2  peripheralInit
+0    468   0    3   2032  5.9  amf_sw_init
+0     16   0    0             @const1845
+0     16   0    0             @const1846
+0   3868   3   10   9434  7.8  amfRomInit
+0     84   0    0   1584  2.5  amfFaultReset
+0    712   1    0   8917  3.0  resetVariables
+0    502   0    0    746  1.9  decalibrateWrite
+0   4350   3  309  17826 11.5  errorCheckRomData
+0    644   1  192   2477  5.4  amfRomWriteDefault
+0    410   0    2   1940  5.9  TIMER0_isr
+0     28   0    0    129  3.4  TIMER1_isr
+0     32   0    0    151  3.5  CCP2_Isr
+0      8   0    0     21  0.9  TIMER2_isr
+0     86   0    0    864  6.3  TIMER3_isr
+0    184   0    3   1397  7.3  RB_isr
+0     40   0    1    243  3.8  LOWVOLT_isr
+0    120   0    1    777  5.2  ebIsConsistant
+0    180   0    3   1223  6.3  processContactorDelay
+0    200   0    1   1087  5.2  processMainsFail
+0    680   1    0             @const1881
+0     86   0    0             @const1885
+0    102   0    0             @const1889
+0     30   0    0     52  1.3  PrintSec
+0      4   0    0             @const1893
+0     56   0    8     79  2.3  PrintPercent
+0     30   0    0     52  1.3  PrintHrMin
+0      8   0    0             @const1897
+0     26   0    0     52  1.3  PrintVolt
+0      6   0    0             @const1899
+0     42   0    0     52  1.3  PrintHz
+0     30   0    0     52  1.3  Printx100mV
+0      8   0    0             @const1903
+0    928   1   28   2957 11.4  settings
+0     14   0    0             @const1911
+0     16   0    0             @const1912
+0     16   0    0             @const1913
+0   5444   4   34  18851 12.0  setter
+0      8   0    0             @const1926
+0     18   0    0             @const1927
+0     18   0    0             @const1928
+0     18   0    0             @const1929
+0     18   0    0             @const1930
+0     18   0    0             @const1931
+0     10   0    0             @const1932
+0     12   0    0             @const1933
+0     12   0    0             @const1934
+0     18   0    0             @const1935
+0     18   0    0             @const1936
+0     18   0    0             @const1937
+0     16   0    0             @const1938
+0     18   0    0             @const1939
+0     16   0    0             @const1940
+0     18   0    0             @const1941
+0     18   0    0             @const1942
+0     18   0    0             @const1943
+0     18   0    0             @const1944
+0     18   0    0             @const1945
+0     18   0    0             @const1946
+0     18   0    0             @const1947
+0     14   0    0             @const1948
+0     18   0    0             @const1949
+0     14   0    0             @const1950
+0     18   0    0             @const1951
+0     14   0    0             @const1952
+0     18   0    0             @const1953
+0    748   1   25   2543  9.8  subset_calib
+0     12   0    0             @const1959
+0     12   0    0             @const1960
+0   2760   2   30   7152 11.3  subsetter_calib
+0     18   0    0             @const1971
+0      8   0    0             @const1972
+0     12   0    0             @const1973
+0     16   0    0             @const1974
+0     18   0    0             @const1975
+0     10   0    0             @const1976
+0     18   0    0             @const1977
+0      6   0    0             @const1978
+0     12   0    0             @const1979
+0     16   0    0             @const1980
+0     12   0    0             @const1981
+0     10   0    0             @const1982
+0     16   0    0             @const1983
+0      8   0    0             @const1984
+0     16   0    0             @const1985
+0      8   0    0             @const1986
+0     12   0    0             @const1987
+0    794   1   25   2685 10.8  subset_bts
+0     16   0    0             @const1993
+0     16   0    0             @const1994
+0   1892   2   26   5351 11.4  subsetter_bts
+0     16   0    0             @const2005
+0     18   0    0             @const2006
+0     18   0    0             @const2007
+0     18   0    0             @const2008
+0     18   0    0             @const2009
+0      8   0    0             @const2010
+0     14   0    0             @const2011
+0     16   0    0             @const2012
+0     18   0    0             @const2013
+0     10   0    0             @const2014
+0     16   0    0             @const2015
+0     18   0    0             @const2016
+0     16   0    0             @const2017
+0     18   0    0             @const2018
+0     18   0    0             @const2019
+0     18   0    0             @const2020
+0     18   0    0             @const2021
+0     18   0    0             @const2022
+0     18   0    0             @const2023
+0     14   0    0             @const2024
+0     18   0    0             @const2025
+0     14   0    0             @const2026
+0     18   0    0             @const2027
+0     14   0    0             @const2028
+0   1322   1    3   8094  9.4  processIO
+0     14   0    0             @const2033
+0     14   0    0             @const2034
+0     18   0    0             @const2035
+0     14   0    0             @const2036
+0     14   0    0             @const2037
+0     14   0    0             @const2038
+0     18   0    0             @const2039
+0     14   0    0             @const2041
+0    378   0    1   3878  5.9  autoRun
+0   1284   1    2   9683  8.9  manualRun
+0     16   0    0             @const2044
+0     18   0    0             @const2045
+0     12   0    0             @const2046
+0     14   0    0             @const2047
+0     12   0    0             @const2048
+0     18   0    0             @const2049
+0     18   0    0             @const2050
+0    250   0    6    277  2.9  main
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               114
+    Statements              5266
+    Comments                2652
+    Volume (V)              355632
+    Difficulty (D)          607.3
+    Effort to implement (E) 215986460
+    Time to implement (T)   3333 hours, 7 minutes
+    Est Delivered Bugs (B)  120
+    Cyclomatic Complexity   706
+    Maintainability (MI)    112
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-00006     0  4  
+00008-000F4   238  0  
+000F6-0FDFE  62152  2626  
+0FE00-0FE02     4  0  
+0FE04-0FE06     4  0  
+0FE08-0FE0A     4  0  
+0FE0C-0FE0E     4  0  
+0FE10-0FE12     4  0  
+0FE14-0FE16     4  0  
+0FE18-0FE1A     4  0  
+0FE1C-0FE1E     4  0  
+0FE20-0FE22     4  0  
+0FE24-0FE26     4  0  
+0FE28-0FE2A     4  0  
+0FE2C-0FE2E     4  0  
+0FE30-0FE32     4  0  
+0FE34-0FE36     4  0  
+0FE38-0FE3A     4  0  
+0FE3C-0FE3E     4  0  
+0FE40-0FE42     4  0  
+0FE44-0FE46     4  0  
+0FE48-0FE4A     4  0  
+0FE4C-0FE4E     4  0  
+0FE50-0FE52     4  0  
+0FE54-0FE56     4  0  
+0FE58-0FE5A     4  0  
+0FE5C-0FE5E     4  0  
+0FE60-0FE62     4  0  
+0FE64-0FE66     4  0  
+0FE68-0FE6A     4  0  
+0FE6C-0FE6E     4  0  
+0FE70-0FE72     4  0  
+0FE74-0FE76     4  0  
+0FE78-0FE7A     4  0  
+0FE7C-0FE7E     4  0  
+0FE80-0FE82     4  0  
+0FE84-0FE86     4  0  
+0FE88-0FE8A     4  0  
+0FE8C-0FE8E     4  0  
+0FE90-0FE92     4  0  
+0FE94-0FE96     4  0  
+0FE98-0FE9A     4  0  
+0FE9C-0FE9E     4  0  
+0FEA0-0FEA2     4  0  
+0FEA4-0FEA6     4  0  
+0FEA8-0FEAA     4  0  
+0FEAC-0FEAE     4  0  
+0FEB0-0FEB2     4  0  
+0FEB4-0FEB6     4  0  
+0FEB8-0FEBA     4  0  
+0FEBC-0FEBE     4  0  
+0FEC0-0FEC2     4  0  
+0FEC4-0FEC6     4  0  
+0FEC8-0FECA     4  0  
+0FECC-0FECE     4  0  
+0FED0-0FED2     4  0  
+0FED4-0FED6     4  0  
+0FED8-0FEDA     4  0  
+0FEDC-0FEDE     4  0  
+0FEE0-0FEE2     4  0  
+0FEE4-0FEE6     4  0  
+0FEE8-0FEEA     4  0  
+0FEEC-0FEEE     4  0  
+0FEF0-0FEF2     4  0  
+0FEF4-0FEF6     4  0  
+0FEF8-0FEFA     4  0  
+0FEFC-0FEFE     4  0  
+0FF00-0FF02     4  0  
+0FF04-0FF06     4  0  
+0FF08-0FF0A     4  0  
+0FF0C-0FF0E     4  0  
+0FF10-0FF12     4  0  
+0FF14-0FF16     4  0  
+0FF18-0FF1A     4  0  
+0FF1C-0FF1E     4  0  
+0FF20-0FF22     4  0  
+0FF24-0FFFE     0  220  
+
+
+
